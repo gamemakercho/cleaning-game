@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "game": "우당탕! 물감 청소",
+  "game_type": "real_time_top_down_drag_cleaning",
+  "content": "완성된 정적 모바일 웹 게임용 최종 에셋. 원본 PNG 보존, 구현 코드와 실행 안내 포함.",
+  "assets": [
+    {
+      "file": "assets/librarian-walk.png",
+      "metadata": "assets/librarian-walk.json",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "transparent_background": true,
+      "role": "사서 네 방향 걷기",
+      "sha256": "d1b7b42fb3e9815333184aa1437075309153032ba7ef7ca0a6a9ae46bba31e36",
+      "frame_count": 16,
+      "animation_names": [
+        "walk_down",
+        "walk_right",
+        "walk_left",
+        "walk_up"
+      ]
+    },
+    {
+      "file": "assets/librarian-run.png",
+      "metadata": "assets/librarian-run.json",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "transparent_background": true,
+      "role": "사서 네 방향 달리기",
+      "sha256": "e4432e9fa0793ec8e9e5718bcce912a0e07bd275008784ac58d66f14ce21e3c8",
+      "frame_count": 16,
+      "animation_names": [
+        "run_down",
+        "run_right",
+        "run_left",
+        "run_up"
+      ]
+    },
+    {
+      "file": "assets/librarian-actions.png",
+      "metadata": "assets/librarian-actions.json",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "transparent_background": true,
+      "role": "사서 몸 털기·기지개",
+      "sha256": "8711b802865ad5049f58f63219ebff42e080638f99e5d610cb090c275fd3f099",
+      "frame_count": 16,
+      "animation_names": [
+        "shake_down",
+        "shake_up",
+        "stretch_left",
+        "stretch_right"
+      ]
+    },
+    {
+      "file": "assets/cat-cleaning-actions.png",
+      "metadata": "assets/cat-cleaning-actions.json",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "transparent_background": true,
+      "role": "최종 고양이 한숨·땀 닦기·필살기·일반 이동",
+      "sha256": "39840c49298ae443054c7aa8b02506800315e19612d44ca00572d5a485630348",
+      "frame_count": 16,
+      "animation_names": [
+        "idle_sigh",
+        "wipe_sweat",
+        "wadada_clean",
+        "ordinary_push"
+      ]
+    },
+    {
+      "file": "assets/paint-cleaning-effects.png",
+      "metadata": "assets/paint-cleaning-effects.json",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "transparent_background": true,
+      "role": "운동화 자국·물감 튀김·닦임·광역 청소",
+      "sha256": "8700f08df3dc5c6cf0c136159a11c00fa536616dc8ada0127e33f21e619ff6ec",
+      "frame_count": 16,
+      "animation_names": [
+        "paint_splash",
+        "erase_footprint",
+        "wide_clean_effect",
+        "footprint_orange_left",
+        "footprint_orange_right",
+        "footprint_green_left",
+        "footprint_green_right"
+      ]
+    }
+  ],
+  "frames_note": "rect 실측. anchor와 duration은 초기값이며 게임 적용 시 미세 보정 가능.",
+  "background": {
+    "file": "assets/library-background.png",
+    "size": [
+      941,
+      1672
+    ],
+    "mode": "RGB",
+    "sha256": "c953d3ab68bc92386dc1480c64bb481602e8017680d67360dc93cd17484ea8d6",
+    "reference_play_area": {
+      "coordinate_space": "original_image_pixels",
+      "bounds": [
+        88,
+        425,
+        745,
+        870
+      ],
+      "is_complete_collision_map": false,
+      "note": "안전한 중앙 바닥 참고 범위. 캐릭터·걸레 여백과 가구 충돌을 실제로 확인할 것."
+    }
+  },
+  "original_pngs_preserved": true,
+  "implemented_play_area": {
+    "coordinate_space": "logical_360x640",
+    "bounds": [
+      18,
+      130,
+      324,
+      370
+    ],
+    "collision_config": "config.js: MAP_CONFIG",
+    "note": "기존 reference_play_area는 제작 자료의 초기 참고값. 게임은 MAP_CONFIG의 실제 서가 충돌을 사용."
+  }
+}

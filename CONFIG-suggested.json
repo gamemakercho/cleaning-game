@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "note": "게임 제작용 초기 제안값. 실제 플레이 후 조정. 좌표·속도는 논리 화면 기준.",
+  "logical_width": 360,
+  "logical_height": 640,
+  "game_duration_s": 45,
+  "final_cleanup_s": 5,
+  "npc_initial_grace_s": 3,
+  "cat_max_speed_px_s": 118,
+  "librarian_walk_speed_ratio": 0.9,
+  "librarian_run_speed_ratio": 1.8,
+  "joystick_deadzone_px": 8,
+  "joystick_max_drag_px": 54,
+  "npc_run_duration_s": [
+    1,
+    2
+  ],
+  "npc_run_cooldown_s": [
+    4,
+    7
+  ],
+  "npc_turn_interval_s": [
+    1.2,
+    2.8
+  ],
+  "npc_shake_duration_s": 0.8,
+  "npc_shake_cooldown_s": [
+    6,
+    9
+  ],
+  "npc_shake_spawn_at_s": 0.4,
+  "npc_shake_stain_count": [
+    4,
+    6
+  ],
+  "npc_shake_radius_px": 42,
+  "npc_stretch_duration_s": 1.2,
+  "npc_stretch_cooldown_s": [
+    8,
+    12
+  ],
+  "footstep_distance_px": 26,
+  "footprint_width_px": 13,
+  "footprint_length_px": 25,
+  "max_active_stains": 180,
+  "cat_idle_start_s": 3,
+  "cat_idle_repeat_s": 6,
+  "special_button_label": "와다다 청소!",
+  "special_charge_max": 100,
+  "special_charge_per_normal_stain": 10,
+  "special_charge_per_special_stain": 0,
+  "special_duration_s": 2.2,
+  "special_range_multiplier": 2.3,
+  "special_speed_multiplier": 1,
+  "grade_a_ratio": 0.9,
+  "grade_b_ratio": 0.7,
+  "clear_ratio": 0.7,
+  "next_step_url": "",
+  "debug": false
+}
+

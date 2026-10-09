@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#234d3f">
+  <meta name="description" content="영혼이 바뀐 사서와 고양이! 드래그로 걸레를 밀고 와다다 필살기로 물감 자국을 닦는 45초 모바일 게임.">
+  <title>우당탕! 물감 청소</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="layout">
+    <aside class="intro" aria-label="게임 소개">
+      <span class="eyebrow">작은 도서관의 큰 소동</span>
+      <h1>우당탕!<br><span>물감 청소</span><i>✦</i></h1>
+      <p>사서와 고양이의 영혼이 바뀌었어요.<br>말썽은 사서가, 청소는 고양이가!</p>
+      <div class="story-rule"></div>
+      <ol><li><b>드래그</b><span>누른 곳을 기준으로 방향과 속도 조절</span></li><li><b>쓱쓱 청소</b><span>초록 걸레로 주황·초록 물감 닦기</span></li><li><b>와다다!</b><span>10개를 닦아 넓은 청소 필살기 충전</span></li></ol>
+      <div class="grade-key"><span>45초의 작은 도전</span><b>A ≥ 90%　B ≥ 70%</b></div>
+      <small>마우스와 터치 모두 플레이할 수 있어요.</small>
+    </aside>
+    <section class="game-shell" aria-label="우당탕! 물감 청소 게임">
+      <canvas id="game" width="360" height="640" aria-label="화면을 누르고 드래그해서 고양이 걸레를 움직이세요"></canvas>
+      <div class="interface">
+        <header class="game-top"><div><span class="room-label">유아자료실 · ROOM 01</span><strong>우당탕! 물감 청소</strong></div><button id="pause" class="icon-button" aria-label="일시정지" disabled>Ⅱ</button></header>
+        <div class="hud" aria-label="게임 현황"><div><span>남은 시간</span><b id="time">45<span>초</span></b></div><div><span>닦은 자국</span><b id="cleaned">0</b></div><div><span>청소율</span><b id="ratio">—</b></div></div>
+        <div id="notice" class="notice" role="status" aria-live="polite"></div>
+        <div id="countdown" class="countdown" hidden></div>
+        <footer class="game-bottom"><div class="charge"><div><span id="charge-label">와다다 게이지</span><b id="charge-value">0 / 100</b></div><div id="charge-meter" class="meter" role="progressbar" aria-label="필살기 게이지" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="charge-fill"></i></div><small id="charge-hint">자국 10개를 닦으면 준비 완료!</small></div><button id="special" disabled><span>✦</span><b>와다다 청소!</b><small>게이지를 채워 주세요</small></button></footer>
+        <div id="modal-layer" class="modal-layer"><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><p class="modal-kicker">잠시만 기다려 주세요</p><h2 id="modal-title">청소 도구 준비 중…</h2><p id="loading-progress">배경과 캐릭터를 불러옵니다</p></section></div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

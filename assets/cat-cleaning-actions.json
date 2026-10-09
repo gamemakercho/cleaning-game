@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "image": "cat-cleaning-actions.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "layout": "four_rows_with_nonuniform_source_regions",
+  "rect_format": "x,y,width,height",
+  "anchor_status": "source_anchors_preserved_with_runtime_collision_checks",
+  "bounds_method": "alpha > 128 with 5px margin inside nonuniform source region; original PNG unchanged",
+  "frames": {
+    "r1-c1": {
+      "rect": [
+        82,
+        55,
+        176,
+        268
+      ],
+      "source_region": [
+        0,
+        0,
+        320,
+        337
+      ],
+      "anchor_in_rect": [
+        88,
+        207
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        88,
+        44
+      ]
+    },
+    "r1-c2": {
+      "rect": [
+        382,
+        55,
+        190,
+        268
+      ],
+      "source_region": [
+        320,
+        0,
+        312,
+        337
+      ],
+      "anchor_in_rect": [
+        97,
+        207
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        96,
+        44
+      ]
+    },
+    "r1-c3": {
+      "rect": [
+        694,
+        55,
+        187,
+        267
+      ],
+      "source_region": [
+        632,
+        0,
+        314,
+        337
+      ],
+      "anchor_in_rect": [
+        92,
+        207
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        89,
+        44
+      ]
+    },
+    "r1-c4": {
+      "rect": [
+        1012,
+        55,
+        170,
+        271
+      ],
+      "source_region": [
+        946,
+        0,
+        308,
+        337
+      ],
+      "anchor_in_rect": [
+        87,
+        207
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        85,
+        44
+      ]
+    },
+    "r2-c1": {
+      "rect": [
+        82,
+        350,
+        170,
+        255
+      ],
+      "source_region": [
+        0,
+        337,
+        320,
+        285
+      ],
+      "anchor_in_rect": [
+        85,
+        194
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        85,
+        41
+      ]
+    },
+    "r2-c2": {
+      "rect": [
+        396,
+        350,
+        169,
+        254
+      ],
+      "source_region": [
+        320,
+        337,
+        312,
+        285
+      ],
+      "anchor_in_rect": [
+        85,
+        194
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        85,
+        41
+      ]
+    },
+    "r2-c3": {
+      "rect": [
+        692,
+        348,
+        176,
+        257
+      ],
+      "source_region": [
+        632,
+        337,
+        314,
+        285
+      ],
+      "anchor_in_rect": [
+        98,
+        196
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        97,
+        43
+      ]
+    },
+    "r2-c4": {
+      "rect": [
+        1017,
+        348,
+        161,
+        262
+      ],
+      "source_region": [
+        946,
+        337,
+        308,
+        285
+      ],
+      "anchor_in_rect": [
+        79,
+        196
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 300,
+      "mop_center_in_rect": [
+        80,
+        43
+      ]
+    },
+    "r3-c1": {
+      "rect": [
+        15,
+        691,
+        290,
+        208
+      ],
+      "source_region": [
+        0,
+        622,
+        320,
+        299
+      ],
+      "anchor_in_rect": [
+        200,
+        144
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 80,
+      "mop_center_in_rect": [
+        96,
+        40
+      ]
+    },
+    "r3-c2": {
+      "rect": [
+        363,
+        687,
+        260,
+        219
+      ],
+      "source_region": [
+        320,
+        622,
+        312,
+        299
+      ],
+      "anchor_in_rect": [
+        158,
+        152
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 80,
+      "mop_center_in_rect": [
+        114,
+        37
+      ]
+    },
+    "r3-c3": {
+      "rect": [
+        659,
+        691,
+        263,
+        205
+      ],
+      "source_region": [
+        632,
+        622,
+        314,
+        299
+      ],
+      "anchor_in_rect": [
+        97,
+        144
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 80,
+      "mop_center_in_rect": [
+        167,
+        40
+      ]
+    },
+    "r3-c4": {
+      "rect": [
+        971,
+        634,
+        256,
+        264
+      ],
+      "source_region": [
+        946,
+        622,
+        308,
+        299
+      ],
+      "anchor_in_rect": [
+        123,
+        201
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 80,
+      "mop_center_in_rect": [
+        126,
+        47
+      ]
+    },
+    "r4-c1": {
+      "rect": [
+        80,
+        937,
+        172,
+        263
+      ],
+      "source_region": [
+        0,
+        921,
+        320,
+        333
+      ],
+      "anchor_in_rect": [
+        86,
+        190
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 150,
+      "mop_center_in_rect": [
+        86,
+        41
+      ]
+    },
+    "r4-c2": {
+      "rect": [
+        393,
+        938,
+        167,
+        256
+      ],
+      "source_region": [
+        320,
+        921,
+        312,
+        333
+      ],
+      "anchor_in_rect": [
+        84,
+        189
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 150,
+      "mop_center_in_rect": [
+        84,
+        40
+      ]
+    },
+    "r4-c3": {
+      "rect": [
+        698,
+        936,
+        166,
+        264
+      ],
+      "source_region": [
+        632,
+        921,
+        314,
+        333
+      ],
+      "anchor_in_rect": [
+        83,
+        191
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 150,
+      "mop_center_in_rect": [
+        83,
+        42
+      ]
+    },
+    "r4-c4": {
+      "rect": [
+        1015,
+        937,
+        164,
+        261
+      ],
+      "source_region": [
+        946,
+        921,
+        308,
+        333
+      ],
+      "anchor_in_rect": [
+        82,
+        190
+      ],
+      "anchor_kind": "body_pivot",
+      "duration_ms": 150,
+      "mop_center_in_rect": [
+        82,
+        41
+      ]
+    }
+  },
+  "animations": {
+    "idle_sigh": {
+      "frames": [
+        "r1-c1",
+        "r1-c2",
+        "r1-c3",
+        "r1-c4"
+      ],
+      "loop": false,
+      "row": 1
+    },
+    "wipe_sweat": {
+      "frames": [
+        "r2-c1",
+        "r2-c2",
+        "r2-c3",
+        "r2-c4"
+      ],
+      "loop": false,
+      "row": 2
+    },
+    "wadada_clean": {
+      "frames": [
+        "r3-c1",
+        "r3-c2",
+        "r3-c3",
+        "r3-c4"
+      ],
+      "loop": true,
+      "row": 3
+    },
+    "ordinary_push": {
+      "frames": [
+        "r4-c1",
+        "r4-c2",
+        "r4-c3",
+        "r4-c4"
+      ],
+      "loop": true,
+      "row": 4
+    }
+  },
+  "alignment_note": "Source rects and anchors preserved; fixed cat scale 0.155, librarian scale 0.18. Runtime collision checks animation mop positions."
+}

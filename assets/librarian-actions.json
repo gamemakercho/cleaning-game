@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "image": "librarian-actions.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "layout": "four_rows_with_nonuniform_source_regions",
+  "rect_format": "x,y,width,height",
+  "anchor_status": "source_anchors_preserved_with_runtime_collision_checks",
+  "bounds_method": "alpha > 128 with 5px margin inside nonuniform source region; original PNG unchanged",
+  "frames": {
+    "r1-c1": {
+      "rect": [
+        88,
+        34,
+        236,
+        274
+      ],
+      "source_region": [
+        0,
+        0,
+        343,
+        322
+      ],
+      "anchor_in_rect": [
+        118.5,
+        266
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r1-c2": {
+      "rect": [
+        377,
+        34,
+        220,
+        275
+      ],
+      "source_region": [
+        343,
+        0,
+        282,
+        322
+      ],
+      "anchor_in_rect": [
+        111,
+        267
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r1-c3": {
+      "rect": [
+        653,
+        34,
+        226,
+        274
+      ],
+      "source_region": [
+        625,
+        0,
+        298,
+        322
+      ],
+      "anchor_in_rect": [
+        113.5,
+        266
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r1-c4": {
+      "rect": [
+        973,
+        33,
+        164,
+        276
+      ],
+      "source_region": [
+        923,
+        0,
+        331,
+        322
+      ],
+      "anchor_in_rect": [
+        82,
+        268
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r2-c1": {
+      "rect": [
+        79,
+        336,
+        243,
+        279
+      ],
+      "source_region": [
+        0,
+        322,
+        345,
+        294
+      ],
+      "anchor_in_rect": [
+        123.5,
+        271
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r2-c2": {
+      "rect": [
+        377,
+        339,
+        208,
+        276
+      ],
+      "source_region": [
+        345,
+        322,
+        279,
+        294
+      ],
+      "anchor_in_rect": [
+        119.5,
+        268
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r2-c3": {
+      "rect": [
+        668,
+        339,
+        213,
+        276
+      ],
+      "source_region": [
+        624,
+        322,
+        286,
+        294
+      ],
+      "anchor_in_rect": [
+        91.5,
+        268
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r2-c4": {
+      "rect": [
+        973,
+        336,
+        167,
+        279
+      ],
+      "source_region": [
+        910,
+        322,
+        344,
+        294
+      ],
+      "anchor_in_rect": [
+        83.5,
+        271
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 200
+    },
+    "r3-c1": {
+      "rect": [
+        88,
+        623,
+        178,
+        273
+      ],
+      "source_region": [
+        0,
+        616,
+        297,
+        289
+      ],
+      "anchor_in_rect": [
+        87,
+        264
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r3-c2": {
+      "rect": [
+        327,
+        681,
+        273,
+        215
+      ],
+      "source_region": [
+        297,
+        616,
+        327,
+        289
+      ],
+      "anchor_in_rect": [
+        235,
+        206
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r3-c3": {
+      "rect": [
+        649,
+        654,
+        296,
+        244
+      ],
+      "source_region": [
+        624,
+        616,
+        350,
+        289
+      ],
+      "anchor_in_rect": [
+        259,
+        235
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r3-c4": {
+      "rect": [
+        1003,
+        618,
+        176,
+        280
+      ],
+      "source_region": [
+        974,
+        616,
+        280,
+        289
+      ],
+      "anchor_in_rect": [
+        92,
+        271
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r4-c1": {
+      "rect": [
+        85,
+        913,
+        176,
+        281
+      ],
+      "source_region": [
+        0,
+        905,
+        297,
+        349
+      ],
+      "anchor_in_rect": [
+        88,
+        273
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r4-c2": {
+      "rect": [
+        346,
+        979,
+        285,
+        207
+      ],
+      "source_region": [
+        297,
+        905,
+        354,
+        349
+      ],
+      "anchor_in_rect": [
+        32,
+        199
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r4-c3": {
+      "rect": [
+        673,
+        972,
+        284,
+        216
+      ],
+      "source_region": [
+        651,
+        905,
+        330,
+        349
+      ],
+      "anchor_in_rect": [
+        35,
+        208
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    },
+    "r4-c4": {
+      "rect": [
+        1006,
+        912,
+        175,
+        284
+      ],
+      "source_region": [
+        981,
+        905,
+        273,
+        349
+      ],
+      "anchor_in_rect": [
+        88,
+        275
+      ],
+      "anchor_kind": "feet_ground",
+      "duration_ms": 300
+    }
+  },
+  "animations": {
+    "shake_down": {
+      "frames": [
+        "r1-c1",
+        "r1-c2",
+        "r1-c3",
+        "r1-c4"
+      ],
+      "loop": false,
+      "row": 1
+    },
+    "shake_up": {
+      "frames": [
+        "r2-c1",
+        "r2-c2",
+        "r2-c3",
+        "r2-c4"
+      ],
+      "loop": false,
+      "row": 2
+    },
+    "stretch_left": {
+      "frames": [
+        "r3-c1",
+        "r3-c2",
+        "r3-c3",
+        "r3-c4"
+      ],
+      "loop": false,
+      "row": 3
+    },
+    "stretch_right": {
+      "frames": [
+        "r4-c1",
+        "r4-c2",
+        "r4-c3",
+        "r4-c4"
+      ],
+      "loop": false,
+      "row": 4
+    }
+  },
+  "alignment_note": "Source rects and anchors preserved; fixed cat scale 0.155, librarian scale 0.18. Runtime collision checks animation mop positions."
+}
