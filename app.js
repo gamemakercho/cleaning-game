@@ -28,10 +28,10 @@ async function preload() {
     await Promise.all(files.map(name => new Promise((resolve, reject) => {
       const img = new Image(); img.onload = () => {
         const size = name === 'library-background' ? [MAP_CONFIG.background.width, MAP_CONFIG.background.height] : SPRITE_DATA[name].size;
-        if (img.naturalWidth !== size[0] || img.naturalHeight !== size[1]) { reject(new Error(`${name}.png의 크기가 다릅니다.`)); return; }
+        if (img.naturalWidth !== size[0] || img.naturalHeight !== size[1]) { reject(new Error(`${name}.webp의 크기가 다릅니다.`)); return; }
         images[name] = img; count++; const progress = $('loading-progress'); if (progress) progress.textContent = `${count} / ${files.length}`; resolve();
       };
-      img.onerror = () => reject(new Error(`${name}.png를 불러오지 못했어요.`)); img.src = new URL(`./assets/${name}.png`, import.meta.url).href;
+      img.onerror = () => reject(new Error(`${name}.webp를 불러오지 못했어요.`)); img.src = new URL(`./assets/${name}.webp`, import.meta.url).href;
     })));
     game = new Game(sheets, { onComplete: result => { document.dispatchEvent(new CustomEvent('gamecomplete', { detail: result })); if (typeof window.onGameComplete === 'function') { try { window.onGameComplete(result); } catch (error) { console.error('onGameComplete callback:', error); } } } });
     loaded = true; shownPhase = ''; updateInterface();
