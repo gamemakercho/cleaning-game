@@ -1,8 +1,17 @@
 import { CONFIG, MAP_CONFIG } from './config.js';
 import { Game, frameAt, transform, clamp } from './engine.js';
 import { SPRITE_DATA } from './sprite-data.js';
+import {readStoryHost,returnToStory} from './story-bridge.js';
 
 const $ = id => document.getElementById(id);
+const storyHost=readStoryHost(location,window.parent,window);
+let viewportHeight=window.visualViewport?.height||innerHeight,viewportWidth=innerWidth;
+function sizeViewport(){
+  const height=window.visualViewport?.height||innerHeight,width=innerWidth;
+  viewportHeight=width!==viewportWidth?height:Math.min(viewportHeight,height);viewportWidth=width;
+  document.documentElement.style.setProperty('--game-viewport-height',`${viewportHeight}px`);
+}
+sizeViewport();window.addEventListener('resize',sizeViewport);window.visualViewport?.addEventListener('resize',sizeViewport);
 const canvas = $('game'), ctx = canvas.getContext('2d', { alpha: false });
 const layer = $('modal-layer'), modal = $('modal'), specialButton = $('special');
 const images = {}; let game, loaded = false, lastTime = null, shownPhase = '', hudTime = 0;
@@ -76,11 +85,13 @@ function updateInterface() {
   } else if (phase === 'result') {
     const r = game.result, noPaint = !r.generated;
     const reaction = noPaint ? '자국이 생기지 않았어요. 다시 도전해 주세요.' : r.grade === 'A' ? '반짝반짝! 사서 고양이가 뿌듯해해요.' : r.grade === 'B' ? '휴, 다행이다냥! 깔끔한 자료실 완성.' : '조금만 더! 다음엔 와다다로 한 번에 쓱쓱.';
-    modal.innerHTML = `<p class="modal-kicker">${r.cleared ? '청소 대작전 성공!' : '오늘의 청소 기록'}</p><h2 id="modal-title">${r.cleared ? '깨끗해졌다냥!' : noPaint ? '다시 준비해요' : '수고했다냥!'}</h2><div class="grade-badge ${r.grade.toLowerCase()}">${noPaint ? '—' : r.grade}</div><div class="result-grid"><div><span>닦은 자국</span><b>${r.cleaned}</b></div><div><span>남은 자국</span><b>${r.remaining}</b></div><div><span>청소율</span><b>${noPaint ? '—' : `${(r.ratio * 100).toFixed(1)}%`}</b></div></div><p>${reaction}</p><button class="primary" id="restart">다시 도전하기</button>${r.cleared ? '<button class="secondary" id="next">다음 단계</button>' : ''}<p class="tip">총 ${r.generated}개 · A 90% 이상 / B 70% 이상</p>`;
+    modal.innerHTML = `<p class="modal-kicker">${r.cleared ? '청소 대작전 성공!' : '오늘의 청소 기록'}</p><h2 id="modal-title">${r.cleared ? '깨끗해졌다냥!' : noPaint ? '다시 준비해요' : '수고했다냥!'}</h2><div class="grade-badge ${r.grade.toLowerCase()}">${noPaint ? '—' : r.grade}</div><div class="result-grid"><div><span>닦은 자국</span><b>${r.cleaned}</b></div><div><span>남은 자국</span><b>${r.remaining}</b></div><div><span>청소율</span><b>${noPaint ? '—' : `${(r.ratio * 100).toFixed(1)}%`}</b></div></div><p>${reaction}</p>${r.cleared ? '<button class="primary" id="next">성공! 사서를 따라가자!</button><button class="retry-small" id="restart">다시하기</button>' : '<button class="primary" id="restart">다시 도전하기</button>'}<p class="tip">총 ${r.generated}개 · A 90% 이상 / B 70% 이상</p>`;
     $('restart').onclick = startGame;
     if ($('next')) $('next').onclick = () => {
-      if (CONFIG.next_step_url) { try { const url = new URL(CONFIG.next_step_url, location.href); if (!['https:', 'http:'].includes(url.protocol)) throw new Error(); location.assign(url.href); } catch { modal.querySelector('.tip').textContent = '다음 단계 주소를 확인해 주세요.'; } }
-      else modal.querySelector('.tip').textContent = '다음 단계는 준비 중이에요. 다시 도전해 보세요!';
+      if(game.phase!=='result'||!game.result?.cleared)return;
+      if(returnToStory(storyHost,game.result,window.parent)){$('next').disabled=true;return;}
+      try{const url=new URL(CONFIG.next_step_url||CONFIG.story_return_url,location.href);if(!['https:','http:'].includes(url.protocol))throw Error();location.assign(url.href);}
+      catch{modal.querySelector('.tip').textContent='이야기로 돌아갈 주소를 확인해 주세요.';}
     };
   }
 }
@@ -156,6 +167,16 @@ function logicalPoint(e) { const r = canvas.getBoundingClientRect(); return { x:
 canvas.addEventListener('pointerdown', e => { if (game?.press(e.pointerId, logicalPoint(e))) { canvas.setPointerCapture(e.pointerId); e.preventDefault(); } });
 canvas.addEventListener('pointermove', e => { if (game && game.input.pointer === e.pointerId) { game.drag(e.pointerId, logicalPoint(e)); e.preventDefault(); } });
 const release = e => { if (game?.input.pointer === e.pointerId) { game.release(e.pointerId); if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId); } };
+// Let only genuinely scrollable dialog content scroll; never chain a game drag to browser chrome.
+let touchY=0;
+document.addEventListener('touchstart',e=>{touchY=e.touches[0]?.clientY||0;},{passive:true});
+document.addEventListener('touchmove',e=>{
+  const y=e.touches[0]?.clientY||touchY,dy=y-touchY;touchY=y;
+  const dialog=e.target.closest?.('.modal');
+  const canScroll=dialog && dialog.scrollHeight>dialog.clientHeight+1 &&
+    (dy>0?dialog.scrollTop>0:dy<0?dialog.scrollTop+dialog.clientHeight<dialog.scrollHeight-1:false);
+  if(!canScroll&&e.cancelable)e.preventDefault();
+},{passive:false});
 canvas.addEventListener('pointerup', release); canvas.addEventListener('pointercancel', release); canvas.addEventListener('lostpointercapture', release);
 specialButton.addEventListener('pointerdown', e => { e.stopPropagation(); e.preventDefault(); if (game?.activateSpecial()) updateInterface(); });
 specialButton.addEventListener('click', e => { if (e.detail === 0 && game?.activateSpecial()) updateInterface(); });

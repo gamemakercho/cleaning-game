@@ -3,3 +3,12 @@
 @media(max-width:480px){.layout{padding:max(5px,env(safe-area-inset-top)) max(5px,env(safe-area-inset-right)) max(5px,env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left));height:100svh}.game-shell{height:min(calc(100svh - max(10px,env(safe-area-inset-top)) - env(safe-area-inset-bottom)),calc((100vw - 10px)*640/360));border-radius:10px;box-shadow:0 4px 25px #40544320}.modal{border-radius:15px}}
 @media(prefers-reduced-motion:reduce){#special.ready{animation:none}.meter i,.notice{transition:none}}
 .icon-button{min-width:48px;min-height:48px}.modal .primary,.modal .secondary,#special{min-height:max(13.4cqw,48px)}.game-bottom{min-height:64px}
+/* A fixed root prevents iframe drags from becoming outer-page/tool-bar scrolls. */
+html,body{width:100%;height:100%;min-height:0;overflow:hidden;overscroll-behavior:none}
+body{position:fixed;inset:0}
+.layout{height:var(--game-viewport-height,100svh);min-height:0;overflow:hidden}
+.game-shell{height:min(880px,calc(var(--game-viewport-height,100svh) - 48px));touch-action:auto}
+.modal{overscroll-behavior:none;touch-action:pan-y}
+.modal .retry-small{display:block;min-height:44px;margin:4px auto 0;padding:0 14px;border:0;border-radius:0;background:transparent;box-shadow:none;color:#998673;font-size:11px;font-weight:400;line-height:1.2;text-decoration:none}
+@media(max-width:800px){.game-shell{height:min(880px,calc(var(--game-viewport-height,100svh) - 28px),calc((100vw - 28px)*640/360))}}
+@media(max-width:480px){.layout{height:var(--game-viewport-height,100svh)}.game-shell{height:min(calc(var(--game-viewport-height,100svh) - max(10px,env(safe-area-inset-top)) - env(safe-area-inset-bottom)),calc((100vw - 10px)*640/360))}}

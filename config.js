@@ -15,6 +15,7 @@ export const CONFIG = {
   special_charge_per_normal_stain: 10, special_charge_per_special_stain: 0,
   special_duration_s: 2.2, special_range_multiplier: 2.3, special_speed_multiplier: 1,
   grade_a_ratio: .9, grade_b_ratio: .7, clear_ratio: .7, next_step_url: '', debug: false,
+  story_return_url:'https://gamemakercho.github.io/cat-librarian/',
   cat_scale: .155, librarian_scale: .18, cat_body_radius: 10,
   mop_half_width: 13, mop_half_depth: 5.5, cat_turn_speed: 13,
   npc_radius: 13, npc_navigation_radius: 27, navigation_cell_px: 8,
